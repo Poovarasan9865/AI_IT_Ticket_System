@@ -1,0 +1,13 @@
+ticket_ref,title,description,category,resolution
+INC-1001,VPN fails after password change,VPN rejects new password after employee password reset,Network / VPN,Clear cached credentials and re-authenticate using the updated password
+INC-1002,Outlook cannot send emails,Messages remain in the outbox and sending fails,Email,Check connectivity and mailbox quota then retry
+INC-1003,Laptop will not start,Laptop has no power indicator and will not boot,Hardware,Check approved power adapter and escalate with asset ID
+INC-1004,Account locked after MFA,User is locked out after repeated multi factor authentication attempts,Access / Account,Follow approved identity verification and account unlock procedure
+INC-1005,WiFi connection drops,Wireless connection disconnects repeatedly in meeting rooms,Network / VPN,Check access point status and collect network diagnostics
+INC-1006,SAP application crashes,SAP closes when the user opens the finance module,Software / Application,Record application version and error details then escalate to Application Support
+INC-1007,Suspicious email received,Employee received an email asking for credentials via an unknown link,Security,Do not click the link and report to Security Operations immediately
+INC-1008,Printer not responding,Office printer appears online but jobs remain queued,Hardware,Check queue and approved printer status then contact Desktop Support
+INC-1009,Mailbox full,User receives quota exceeded notification and messages bounce,Email,Review mailbox quota and follow company retention policy
+INC-1010,Teams audio not working,User cannot hear audio during online meetings,Software / Application,Check selected audio device and app permissions then restart Teams
+INC-1011,Password reset request,Employee forgot their account password,Access / Account,Use the approved self-service password reset process
+INC-1012,Internet outage in office,Multiple employees report internet is down,Network / VPN,Check service status and escalate as high priority to Network Support

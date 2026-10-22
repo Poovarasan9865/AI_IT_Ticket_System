@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Enterprise IT Ticket AI</title><link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header><div><span class="eyebrow">ENTERPRISE SERVICE DESK</span><h1>IT Ticket Intelligence</h1><p>Classify incidents, discover similar tickets, and recommend next steps.</p></div><div class="status"><i></i> API connected</div></header>
+<main>
+<section class="metrics" id="metrics">
+<div class="metric"><span>Total tickets</span><strong id="total">—</strong></div>
+<div class="metric"><span>Open</span><strong id="open">—</strong></div>
+<div class="metric"><span>In progress</span><strong id="progress">—</strong></div>
+<div class="metric"><span>Resolved</span><strong id="resolved">—</strong></div>
+</section>
+<div class="layout">
+<section class="panel">
+<div class="panel-head"><div><span class="eyebrow">NEW INCIDENT</span><h2>Create a ticket</h2></div></div>
+<form id="ticket-form">
+<label>Ticket title<input id="title" required minlength="3" placeholder="e.g. VPN fails after password change"></label>
+<label>Description<textarea id="description" required minlength="5" rows="5" placeholder="Describe the problem, error message, and impact..."></textarea></label>
+<label>Requester<input id="requester" value="Employee" placeholder="Name or team"></label>
+<button type="submit" id="submit">Analyze & create ticket</button>
+<p class="hint">Demo uses local rules and TF-IDF similarity. No external AI API key is required.</p>
+</form>
+</section>
+<section class="panel result-panel">
+<div class="panel-head"><div><span class="eyebrow">AI TRIAGE</span><h2>Latest analysis</h2></div><span class="pill" id="method">Waiting</span></div>
+<div id="result" class="empty">Submit a ticket to see category, priority, team, suggested resolution, and similar historical incidents.</div>
+</section>
+</div>
+<section class="panel tickets-panel">
+<div class="panel-head"><div><span class="eyebrow">SERVICE DESK QUEUE</span><h2>Recent tickets</h2></div><button class="secondary" id="refresh" type="button">Refresh</button></div>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Ticket</th><th>Category</th><th>Priority</th><th>Team</th><th>Status</th><th>Action</th></tr></thead><tbody id="tickets"><tr><td colspan="7">Loading tickets…</td></tr></tbody></table></div>
+</section>
+</main>
+<footer>AI IT Ticket Management System · Demo data only · Human review required before operational changes</footer>
+<script src="/static/app.js"></script>
+</body></html>
